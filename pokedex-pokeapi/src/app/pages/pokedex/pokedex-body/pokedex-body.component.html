@@ -10,10 +10,10 @@
     </mat-card-actions>
   </mat-card>-->
 
-  <div class="pokeCard" *ngFor="let user of [].constructor(150); let r = index">
-    <p class="cardNumber">#{{r+1+151}}</p>
+  <div class="pokeCard" *ngFor="let user of [].constructor(151); let r = index">
+    <p class="cardNumber">#{{r+1+startIndex}}</p>
     <!---Hover: hacer un pelin grande al pokimon-->
-    <img class="cardImg" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/{{r+1+151}}.png">
+    <img class="cardImg" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/{{r+1+startIndex}}.png">
     <p class="cardName">Nombre</p>
   </div>
 </div>

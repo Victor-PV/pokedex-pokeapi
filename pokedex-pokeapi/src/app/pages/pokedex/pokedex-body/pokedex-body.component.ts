@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokedexBodyComponent implements OnInit {
 
+  startIndex : number = 151;
+
   constructor() { }
 
   ngOnInit(): void {
