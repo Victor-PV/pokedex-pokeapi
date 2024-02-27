@@ -1,0 +1,19 @@
+<div class="container" id="container">
+  <!--<mat-card *ngFor="let user of [].constructor(9)">
+    <mat-card-header>
+      <mat-card-title>Actions Buttons</mat-card-title>
+      <mat-card-subtitle>Start</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>-->
+
+  <div class="pokeCard" *ngFor="let user of [].constructor(150); let r = index">
+    <p class="cardNumber">#{{r+1+151}}</p>
+    <!---Hover: hacer un pelin grande al pokimon-->
+    <img class="cardImg" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/{{r+1+151}}.png">
+    <p class="cardName">Nombre</p>
+  </div>
+</div>
