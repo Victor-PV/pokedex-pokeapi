@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { REGIONES } from 'src/app/constants/global.constants';
+import { Region } from '../../../interfaces/region';
 
 @Component({
   selector: 'app-pokedex-body',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokedexBodyComponent implements OnInit {
 
-  startIndex : number = 151;
+  regiones : any = REGIONES;
+  regionActual : Region = this.regiones.HOENN;
 
   constructor() { }
 
