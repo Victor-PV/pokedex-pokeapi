@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { REGIONES } from 'src/app/constants/global.constants';
+import { Region } from '../../../interfaces/region';
 
 @Component({
   selector: 'app-pokedex-header',
@@ -6,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pokedex-header.component.scss']
 })
 export class PokedexHeaderComponent implements OnInit {
-
 
   search : String ="";
   constructor() { }

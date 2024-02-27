@@ -18,6 +18,7 @@ import { PokemonBodyComponent } from './pages/pokemon/pokemon-body/pokemon-body.
 import { PokemonHeaderComponent } from './pages/pokemon/pokemon-header/pokemon-header.component';
 import { PokemonPageComponent } from './pages/pokemon/pokemon-page/pokemon-page.component';
 import { PokedexPageComponent } from './pages/pokedex/pokedex-page/pokedex-page.component';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { PokedexPageComponent } from './pages/pokedex/pokedex-page/pokedex-page.
     MatTabsModule,
     MatCardModule,
     MatButtonModule, FormsModule, MatFormFieldModule, MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],
