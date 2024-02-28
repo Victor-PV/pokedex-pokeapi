@@ -11,13 +11,5 @@ const GALAR : Region = {nombre: "Galar", desde: 810, hasta: 905, cantidad: 80}
 const PALDEA : Region = {nombre: "Paldea", desde: 906, hasta: 1025, cantidad: 120}
 
 export const REGIONES : any = {
-    KANTO, 
-    JOHTO,
-    HOENN,
-    SINNOH,
-    TESELIA,
-    KALOS,
-    ALOLA,
-    GALAR,
-    PALDEA
+    KANTO, JOHTO, HOENN, SINNOH, TESELIA, KALOS, ALOLA, GALAR, PALDEA
 }
