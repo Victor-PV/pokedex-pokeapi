@@ -10,8 +10,7 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class PokedexBodyComponent implements OnInit {
 
-  data : any = {};
-  parame : string = "/pokedex/2";
+  llamada : any = {};
 
   regiones : any = REGIONES;
   regionActual : Region = this.regiones.HOENN;
@@ -24,9 +23,15 @@ export class PokedexBodyComponent implements OnInit {
   }
 
   llenarData(){
-    this.apiService.getData(this.parame).subscribe(data => {
-      this.data = data;
-      console.log(data.pokemon_entries)
+    let pokemonIndexCounter : number = 0;
+    this.apiService.getAllPokemonByRegion(this.regionActual).subscribe(data => {
+      data.results.forEach((item: any) => {
+        //Carga la etiqueta del nombre del pokemon, si la pilla ejecuta el codigo
+        let element : any = document.getElementById("pokemonNameTag"+(this.regionActual.desde+pokemonIndexCounter++));
+        if(element)
+          element.innerHTML = item.name.charAt(0).toUpperCase() + item.name.substring(1); //Sustituye la primera letra por mayuscula
+      });
+      console.log(data.results)
     })
   }
 
