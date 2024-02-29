@@ -16,7 +16,11 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   public getAllPokemonByRegion(region: Region) : Observable<any> {
-    console.log(this.urlAapi + "pokemon?limit="+region.cantidad+"&offset="+(region.desde-1))
+    //console.log(this.urlAapi + "pokemon?limit="+region.cantidad+"&offset="+(region.desde-1))
     return this.http.get<any>(this.urlAapi + "pokemon?limit="+region.cantidad+"&offset="+(region.desde-1));
+  }
+  public getPokemonById(id: number) : Observable<any> {
+    //console.log(this.urlAapi + "pokemon?limit="+region.cantidad+"&offset="+(region.desde-1))
+    return this.http.get<any>(this.urlAapi + "pokemon/"+id);
   }
 }
