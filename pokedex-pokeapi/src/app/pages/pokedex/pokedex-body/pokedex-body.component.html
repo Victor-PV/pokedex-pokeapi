@@ -10,9 +10,9 @@
     </mat-card-actions>
   </mat-card>-->
   <div class="pokeCard" *ngFor="let user of [].constructor(regionActual.cantidad); let r = index">
+    <!--Aqui se van a cargar todas las cartas de los bicharracos-->
     <p class="cardNumber">#{{r+regionActual.desde}}</p>
-    <!---Hover: hacer un pelin grande al pokimon-->
     <img class="cardImg" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/{{r+regionActual.desde}}.png">
-    <p class="cardName" id="pokemonNameTag{{r+regionActual.desde}}"></p>
+    <p class="cardName" #pokemonNameTag id="pokemonNameTag{{r+regionActual.desde}}"></p>
   </div>
 </div>
