@@ -6,6 +6,6 @@
     <!--Aqui se van a cargar todas las cartas de los bicharracos-->
     <p class="cardNumber">#{{item.id}}</p>
     <img class="cardImg" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/{{item.id}}.png">
-    <p class="cardName" #pokemonNameTag id="pokemonNameTag{{item.name}}">{{item.name.charAt(0).toUpperCase() + item.name.substring(1)}}</p>
+    <p class="cardName" #pokemonNameTag id="pokemonNameTag{{item.name}}">{{item.name|titlecase}}</p>
   </div>
 </div>

@@ -15,19 +15,19 @@ export class PokedexBodyComponent implements OnInit, AfterViewInit {
 
   regiones : any = REGIONES;
   regionesList : any = Object.keys(this.regiones);
-  regionActual : Region = this.regiones.SINNOH;
+  regionActual : Region = this.regiones.TESELIA;
 
 
   constructor(private apiService : ApiService) { }
 
   ngOnInit(): void {
-   
+
     this.loadData();
 
   }
 
   @ViewChildren("bodyListContainer") bodyListContainer!: QueryList<any>
-  @ViewChildren("pokemonNameTag") divs: QueryList<any> | undefined  
+  @ViewChildren("pokemonNameTag") divs: QueryList<any> | undefined
   ngAfterViewInit():void {
     //console.log(this.bodyListContainer.get(0).nativeElement)
   }
