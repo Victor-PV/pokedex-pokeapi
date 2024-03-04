@@ -6,5 +6,13 @@
       <input type="tel" matInput placeholder="Search" name= "search" [(ngModel)]= "search">
       <button matSuffix mat-button><mat-icon >search</mat-icon></button>
     </mat-form-field>
-  </div>
+
+    <mat-form-field id="selectRegionField">
+      <mat-label>Select an option</mat-label>
+      <mat-select [(value)]="selected" #selectRegion>
+        <mat-option *ngFor="let item of regionesList; let r = index" value="{{item}}">{{item}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div> 
+  
 </header>
